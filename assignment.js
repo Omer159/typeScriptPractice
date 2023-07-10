@@ -383,3 +383,82 @@ for (var _k = 0, usersOfSite_1 = usersOfSite; _k < usersOfSite_1.length; _k++) {
         console.log("Welcome ".concat(user, ", how are you"));
     }
 }
+// question 31
+// No Users: Add an if test to Exercise 28 to make sure the list of users is not empty.
+var usersOfAnotherSite = ['omer', 'abdulHadi', 'muneeb', 'Mustafa'];
+if (usersOfAnotherSite.length == 0) {
+    console.log('We need to find some users!');
+}
+else {
+    console.log("we have some users");
+}
+for (var _l = 0, usersOfAnotherSite_1 = usersOfAnotherSite; _l < usersOfAnotherSite_1.length; _l++) {
+    var user = usersOfAnotherSite_1[_l];
+    if (usersOfAnotherSite.length != 0) {
+        usersOfAnotherSite.pop();
+        usersOfAnotherSite.pop();
+    }
+}
+console.log(usersOfAnotherSite);
+console.log("array is now empty");
+//question 32
+//Checking Usernames: Do the following to create a program that simulates how websites ensure that everyone has a unique username.
+var currentUsers = ["Ahmed", 'OER', 'Immad', 'Anas', 'Ahmedhashmi'];
+var newUsers = ["Ahmed", 'Omer', 'Amin', 'Sara', 'Elishba'];
+for (var _m = 0, newUsers_1 = newUsers; _m < newUsers_1.length; _m++) {
+    var newUser_1 = newUsers_1[_m];
+    var usernameTaken = false;
+    for (var _o = 0, currentUsers_1 = currentUsers; _o < currentUsers_1.length; _o++) {
+        var currentUser = currentUsers_1[_o];
+        if (newUser_1.toLowerCase() === currentUser.toLowerCase()) {
+            usernameTaken = true;
+            break;
+        }
+    }
+    if (usernameTaken == true) {
+        console.log("".concat(newUser_1, " is taken"));
+    }
+    else {
+        console.log("".concat(newUser_1, " is available"));
+    }
+}
+//question 32
+//Checking Usernames: Do the following to create a program that simulates how websites ensure that everyone has a unique username.
+var ordinalNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+for (var _p = 0, ordinalNumber_1 = ordinalNumber; _p < ordinalNumber_1.length; _p++) {
+    var num = ordinalNumber_1[_p];
+    if (num == 1) {
+        console.log('1st');
+    }
+    if (num == 2) {
+        console.log('2nd');
+    }
+    if (num == 3) {
+        console.log('3rd');
+    }
+    if (num == 4) {
+        console.log('4th');
+    }
+    if (num == 5) {
+        console.log('5th');
+    }
+    if (num == 6) {
+        console.log('6th');
+    }
+    if (num == 7) {
+        console.log('7th');
+    }
+    if (num == 8) {
+        console.log('8th');
+    }
+    if (num == 9) {
+        console.log('9th');
+    }
+}
+//question 34
+//Pizzas: Think of at least three kinds of your favorite pizza. Store these pizza names in a array, and then use a for loop to print the name of each pizza.
+var myTypeOfPizza = ["peperoni pizza", 'arabian pizza', 'cheesy delight pizza', 'extra creamy pizza'];
+myTypeOfPizza.forEach(function (pizza) {
+    console.log("I like ".concat(pizza, " so much"));
+});
+console.log("\nI absolutely love pizza! Its mouthwatering flavors and delicious toppings make it one of my all-time favorite foods. Whether it's a ".concat(myTypeOfPizza[0], " or a ").concat(myTypeOfPizza[2], ", pizza always brings me immense joy. I could eat it every day without ever getting tired of its cheesy goodness."));

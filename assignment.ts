@@ -568,4 +568,108 @@ for (let user of usersOfSite){
         }}
         
 
+// question 31
+// No Users: Add an if test to Exercise 28 to make sure the list of users is not empty.
+
+let usersOfAnotherSite: string[] = ['omer' , 'abdulHadi' , 'muneeb' , 'Mustafa']
+
+    if (usersOfAnotherSite.length == 0 ) {
+    console.log('We need to find some users!');
+    }
+    else {
+    console.log(`we have some users`);
+    }
+
+    for (let user of usersOfAnotherSite){
+
+        if(usersOfAnotherSite.length != 0 ){
+            usersOfAnotherSite.pop()
+            usersOfAnotherSite.pop()
+            
+        }}
+    console.log(usersOfAnotherSite)
+    console.log("array is now empty")
+
+
+//question 32
+//Checking Usernames: Do the following to create a program that simulates how websites ensure that everyone has a unique username.
+
+
+
+let currentUsers : string[] = ["Ahmed" , 'OER' , 'Immad' , 'Anas' , 'Ahmedhashmi']
+let newUsers : string[] = ["Ahmed" , 'Omer' , 'Amin' , 'Sara' , 'Elishba']
+
+
+for (let newUser of newUsers){
+    let usernameTaken : boolean = false;
+    for (let currentUser of currentUsers) {
+            if (newUser.toLowerCase() === currentUser.toLowerCase()){
+            usernameTaken = true
+            break
+            }}
+if (usernameTaken == true){
+    console.log (`${newUser} is taken`)
+                }
+else{
+    console.log (`${newUser} is available`)
+ }       
+        
+        
+}
+
+
+       
+
+//question 32
+//Checking Usernames: Do the following to create a program that simulates how websites ensure that everyone has a unique username.
+
+let ordinalNumber : number[] = [1,2,3,4,5,6,7,8,9]
+for (let num of ordinalNumber) {
+    if (num == 1){
+        console.log('1st')
+    }
+    if (num == 2){
+        console.log('2nd')
+    }
+    if (num == 3){
+        console.log('3rd')
+    }
+    if (num == 4){
+        console.log('4th')
+    }
+    if (num == 5){
+        console.log('5th')
+    }
+    if (num == 6){
+        console.log('6th')
+    }
+    if (num == 7){
+        console.log('7th')
+    }
+    if (num == 8){
+        console.log('8th')
+    }
+    if (num == 9){
+        console.log('9th')
+    }
+}
+
+//question 34
+//Pizzas: Think of at least three kinds of your favorite pizza. Store these pizza names in a array, and then use a for loop to print the name of each pizza.
+
+let myTypeOfPizza : string[] = ["peperoni pizza" , 'arabian pizza' , 'cheesy delight pizza' , 'extra creamy pizza']
+
+myTypeOfPizza.forEach(pizza => {
+    console.log (`I like ${pizza} so much`)
+});
+
+console.log (`
+I absolutely love pizza! Its mouthwatering flavors and delicious toppings make it one of my all-time favorite foods. Whether it's a ${myTypeOfPizza[0]} or a ${myTypeOfPizza[2]}, pizza always brings me immense joy. I could eat it every day without ever getting tired of its cheesy goodness.`)
+
+
+
+//question 35
+// Animals: Think of at least three different animals that have a common characteristic. Store the names of these animals in a list, and then use a for loop to print out the name of each animal. • Modify your program to print a statement about each animal, such as A dog would make a great pet. • Add a line at the end of your program stating what these animals have in common. You could print a sentence such as Any of these animals would make a great pet!
+
+
 export {}
