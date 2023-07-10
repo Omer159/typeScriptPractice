@@ -671,5 +671,81 @@ I absolutely love pizza! Its mouthwatering flavors and delicious toppings make i
 //question 35
 // Animals: Think of at least three different animals that have a common characteristic. Store the names of these animals in a list, and then use a for loop to print out the name of each animal. • Modify your program to print a statement about each animal, such as A dog would make a great pet. • Add a line at the end of your program stating what these animals have in common. You could print a sentence such as Any of these animals would make a great pet!
 
+let commonAnimal : string []= ["cat" , 'dog' , 'rabbit' , 'wolf'] 
+let commonCharecterstics : string [] = ["nails" , "ears" , 'nose' , 'teeth']
+
+
+for (let animal of commonAnimal){
+    console.log(`A ${animal} would be a great pet`)
+}
+
+console.log(`they all have the same ${commonCharecterstics[0]}, ${commonCharecterstics[1]} ,${commonCharecterstics[2]} and ${commonCharecterstics[3]} `)
+
+
+//question 36
+//T-Shirt: Write a function called make_shirt() that accepts a size and the text of a message that should be printed on the shirt. The function should print a sentence summarizing the size of the shirt and the message printed on it. Call the function.
+
+let shirtSize = (text: string  , size: number) => {
+    console.log(`${text} - ${size}`);
+}
+
+shirtSize("Messi", 10)
+shirtSize("Ronaldo" , 7)
+
+
+
+//question 37
+//Large Shirts: Modify the make_shirt() function so that shirts are large by default with a message that reads I love TypeScript. Make a large shirt and a medium shirt with the default message, and a shirt of any size with a different message.
+const size = ["large",'medium'] as const
+let largeShirt = (msg:string,  size:string ) => {
+    if (size == "medium" || size == "large" ){
+        console.log (`${msg} size : ${size}`)
+    }
+    else {
+        console.log (`${msg} size : S,XL`)
+    }
+}
+largeShirt( " I love TypeScript" , "X")
+
+
+
+
+
+
+//question 38
+//Cities: Write a function called describe_city() that accepts the name of a city and its country. The function should print a simple sentence, such as Karachi is in Pakistan. Give the parameter for the country a default value. Call your function for three different cities, at least one of which is not in the default country.
+
+let describeCity = (city: string  , country : string = "unknown country") => {
+    console.log (`${city} is in ${country}`)
+}
+
+describeCity ("Lahore" , "Pakistan")
+describeCity ("Amastardam")
+describeCity ("Mombay" , "India")
+
+
+
+//question 39
+//City Names: Write a function called city_country() that takes in the name of a city and its country. The function should return a string formatted like this: "Lahore, Pakistan"
+
+
+
+let cityCountry = (city: string  , country : string) => {
+    console.log (`"${city},${country}"`)
+}
+
+cityCountry ("Lahore" , "Pakistan")
+cityCountry ("Amastardam", "Netherlands")
+cityCountry ("Mombay" , "India")
+
+
+
+
+
+
+
+
+
+
 
 export {}

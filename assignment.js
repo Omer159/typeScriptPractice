@@ -462,3 +462,48 @@ myTypeOfPizza.forEach(function (pizza) {
     console.log("I like ".concat(pizza, " so much"));
 });
 console.log("\nI absolutely love pizza! Its mouthwatering flavors and delicious toppings make it one of my all-time favorite foods. Whether it's a ".concat(myTypeOfPizza[0], " or a ").concat(myTypeOfPizza[2], ", pizza always brings me immense joy. I could eat it every day without ever getting tired of its cheesy goodness."));
+//question 35
+// Animals: Think of at least three different animals that have a common characteristic. Store the names of these animals in a list, and then use a for loop to print out the name of each animal. • Modify your program to print a statement about each animal, such as A dog would make a great pet. • Add a line at the end of your program stating what these animals have in common. You could print a sentence such as Any of these animals would make a great pet!
+var commonAnimal = ["cat", 'dog', 'rabbit', 'wolf'];
+var commonCharecterstics = ["nails", "ears", 'nose', 'teeth'];
+for (var _q = 0, commonAnimal_1 = commonAnimal; _q < commonAnimal_1.length; _q++) {
+    var animal = commonAnimal_1[_q];
+    console.log("A ".concat(animal, " would be a great pet"));
+}
+console.log("they all have the same ".concat(commonCharecterstics[0], ", ").concat(commonCharecterstics[1], " ,").concat(commonCharecterstics[2], " and ").concat(commonCharecterstics[3], " "));
+//question 36
+//T-Shirt: Write a function called make_shirt() that accepts a size and the text of a message that should be printed on the shirt. The function should print a sentence summarizing the size of the shirt and the message printed on it. Call the function.
+var shirtSize = function (text, size) {
+    console.log("".concat(text, " - ").concat(size));
+};
+shirtSize("Messi", 10);
+shirtSize("Ronaldo", 7);
+//question 37
+//Large Shirts: Modify the make_shirt() function so that shirts are large by default with a message that reads I love TypeScript. Make a large shirt and a medium shirt with the default message, and a shirt of any size with a different message.
+var size = ["large", 'medium'];
+var largeShirt = function (msg, size) {
+    if (size == "medium" || size == "large") {
+        console.log("".concat(msg, " size : ").concat(size));
+    }
+    else {
+        console.log("".concat(msg, " size : S,XL"));
+    }
+};
+largeShirt(" I love TypeScript", "X");
+//question 38
+//Cities: Write a function called describe_city() that accepts the name of a city and its country. The function should print a simple sentence, such as Karachi is in Pakistan. Give the parameter for the country a default value. Call your function for three different cities, at least one of which is not in the default country.
+var describeCity = function (city, country) {
+    if (country === void 0) { country = "unknown country"; }
+    console.log("".concat(city, " is in ").concat(country));
+};
+describeCity("Lahore", "Pakistan");
+describeCity("Amastardam");
+describeCity("Mombay", "India");
+//question 39
+//City Names: Write a function called city_country() that takes in the name of a city and its country. The function should return a string formatted like this: "Lahore, Pakistan"
+var cityCountry = function (city, country) {
+    console.log("\"".concat(city, ",").concat(country, "\""));
+};
+cityCountry("Lahore", "Pakistan");
+cityCountry("Amastardam", "Netherlands");
+cityCountry("Mombay", "India");
