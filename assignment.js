@@ -507,3 +507,91 @@ var cityCountry = function (city, country) {
 cityCountry("Lahore", "Pakistan");
 cityCountry("Amastardam", "Netherlands");
 cityCountry("Mombay", "India");
+;
+var AlbumDetails = function (artists, albums, tracks) {
+    var albumDetails = {
+        artists: artists,
+        albums: albums,
+    };
+    if (tracks != undefined) {
+        albumDetails.tracks = tracks;
+    }
+    return albumDetails;
+};
+var weekendAlbumDetails = AlbumDetails("The Weeknd", "Starboy", 18);
+var cigeretteAfterTextAlbumDetails = AlbumDetails("Cigarette After Sex", "Apocalypse", 21);
+var anuvJainAlbumDetails = AlbumDetails("Anuv Jain", "Barishien", 9);
+console.log(weekendAlbumDetails);
+console.log(cigeretteAfterTextAlbumDetails);
+console.log(anuvJainAlbumDetails);
+//question 41
+//Magicians: Make a array of magician’s names. Pass the array to a function called show_magicians(), which prints the name of each magician in the array.
+var magicians = ['Albus Dumbledore', 'Voldemort', 'The Founders', 'Gellert Grindelwald', 'Minerva McGonagall', 'James and Lily Potter', 'Remus Lupin', 'Sirius Black'];
+var showMagicians = function () {
+    for (var _i = 0, magicians_1 = magicians; _i < magicians_1.length; _i++) {
+        var magician = magicians_1[_i];
+        console.log(magician);
+    }
+};
+showMagicians();
+//question42
+//Great Magicians: Start with a copy of your program from Exercise 39. Write a function called make_great() that modifies the array of magicians by adding the phrase the Great to each magician’s name. Call show_magicians() to see that the list has actually been modified.
+var magiciansCopy = ['Albus Dumbledore', 'Voldemort', 'The Founders', 'Gellert Grindelwald', 'Minerva McGonagall', 'James and Lily Potter', 'Remus Lupin', 'Sirius Black'];
+var makeGreat = function () {
+    for (var magicians_2 = 0; magicians_2 < magiciansCopy.length; magicians_2++) {
+        magiciansCopy[magicians_2] = " the great " + magiciansCopy[magicians_2];
+    }
+    for (var _i = 0, magiciansCopy_1 = magiciansCopy; _i < magiciansCopy_1.length; _i++) {
+        var magician = magiciansCopy_1[_i];
+        console.log(magician);
+    }
+};
+makeGreat();
+//question43
+//Unchanged Magicians: Start with your work from Exercise 40. Call the function make_great() with a copy of the array of magicians’ names. Because the original array will be unchanged, return the new array and store it in a separate array. Call show_magicians() with each array to show that you have one array of the original names and one array with the Great added to each magician’s name.
+function show_Magicians(magicians) {
+    magicians.forEach(function (magician) {
+        console.log(magician);
+    });
+}
+function make_great(magicians) {
+    var greatMagicians = [];
+    for (var i = 0; i < magicians.length; i++) {
+        greatMagicians.push("the Great " + magicians[i]);
+    }
+    return greatMagicians;
+}
+// Example usage
+var magicianNames = ["Harry Houdini", "David Copperfield", "Penn Jillette", "Teller"];
+var greatMagicianNames = make_great(__spreadArray([], magicianNames, true));
+show_Magicians(magicianNames);
+show_Magicians(greatMagicianNames);
+//question44 
+// Sandwiches: Write a function that accepts a array of items a person wants on a sandwich. The function should have one parameter that collects as many items as the function call provides, and it should print a summary of the sandwich that is being ordered. Call the function three times, using a different number of arguments each time.
+var makeSandwich = function (sandwichItemsPersonWants) {
+    return console.log("Items Customer want in sandwich are ".concat(sandwichItemsPersonWants, " "));
+};
+makeSandwich(["Tomato", "BBQ", "Cheese", "Toast", "Ketchup", "Mayo", 'Egg']);
+var carDetails = function (manufacturer, modelName, numberPlate, color) {
+    var showDetails = {
+        manufacturer: manufacturer,
+        modelName: modelName
+    };
+    if (numberPlate !== undefined) {
+        showDetails.numberPlate = numberPlate;
+    }
+    if (color !== undefined) {
+        showDetails.color = color;
+    }
+    return showDetails;
+};
+var car1Detail = carDetails("toyota", " Corrola", 2424, 'yellow');
+var car2Detail = carDetails("Honda", "Civic", 4040, 'black');
+var car3Detail = carDetails("Toyota", "Camry", 3030, "maroon");
+var car4Detail = carDetails("Honda", "Accord", 8989, "white");
+var car5Detail = carDetails("BMW", "X3");
+console.log(car1Detail);
+console.log(car2Detail);
+console.log(car3Detail);
+console.log(car4Detail);
+console.log(car5Detail);
